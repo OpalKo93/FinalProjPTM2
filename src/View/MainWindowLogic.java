@@ -35,7 +35,7 @@ public class MainWindowLogic implements Observer{
 	@FXML
 	TextArea script;
 	@FXML
-	Button HomeButton;
+	Button CalcButton;
 	@FXML
 	AnchorPane ManualPane,HomePane,MapPane,AutoPilotPane;
 	
@@ -49,9 +49,15 @@ public class MainWindowLogic implements Observer{
 		//calc path needed
 		
 	}
-	
-	
 	public void HomeShower() {
+		HomePane.setVisible(false);
+		MapPane.setVisible(false);
+		ManualPane.setVisible(false);
+		AutoPilotPane.setVisible(false);
+	}
+	
+	
+	public void CalcShower() {
 		HomePane.setVisible(true);
 		MapPane.setVisible(false);
 		ManualPane.setVisible(false);
