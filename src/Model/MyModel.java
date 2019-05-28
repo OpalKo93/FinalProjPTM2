@@ -44,6 +44,7 @@ public class MyModel extends Observable implements Model  {
 		
 		setChanged();
 		notifyObservers("Calculated");
+		//Hello
 	}
 
 }

@@ -14,8 +14,8 @@ breaks = 0
 throttle = 1
 var ho = heading
 while alt < 1000 {
-rudder =  ( throttle-5 )/ 20
-aileron = roll / 70
+alt =  ( throttle-5 )/ elevator
+throttle = roll / 70
 elevator = pitch / 50
 print alt
 }
