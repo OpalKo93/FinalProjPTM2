@@ -15,9 +15,9 @@
       <AnchorPane layoutX="-28.0" prefHeight="575.0" prefWidth="273.0" style="-fx-background-color: #248399;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Button layoutX="26.0" layoutY="80.0" mnemonicParsing="false" onMouseClicked="#ManualShower" prefHeight="32.0" prefWidth="245.0" text="Manual Mode" />
-            <Button layoutX="26.0" layoutY="200.0" mnemonicParsing="false" onMouseClicked="#AutoPilotShower" prefHeight="32.0" prefWidth="245.0" text="AutoPilot Mode" />
-            <Button fx:id="CalcButton" layoutX="26.0" layoutY="320.0" mnemonicParsing="false" onMouseClicked="#CalcShower" prefHeight="32.0" prefWidth="245.0" text="ClacPath Mode" />
-            <Text layoutX="35.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="©Opal's Koren" />
+            <Button layoutX="26.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#AutoPilotShower" prefHeight="32.0" prefWidth="245.0" text="AutoPilot Mode" />
+            <Button fx:id="CalcButton" layoutX="26.0" layoutY="260.0" mnemonicParsing="false" onMouseClicked="#CalcShower" prefHeight="32.0" prefWidth="245.0" text="ClacPath Mode" />
+            <Text layoutX="35.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="©Opal's Koren" />
             <Button fx:id="HomeButton" layoutX="26.0" layoutY="1.0" mnemonicParsing="false" onAction="#HomeShower" prefHeight="26.0" prefWidth="35.0" text="🏠" />
          </children></AnchorPane>
       <AnchorPane fx:id="HomePane" layoutX="244.0" layoutY="-6.0" prefHeight="104.0" prefWidth="457.0" visible="false">

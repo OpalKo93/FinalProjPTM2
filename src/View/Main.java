@@ -24,7 +24,6 @@ public class Main extends Application {
 		 ViewModel vm=new ViewModel(m);
 		 m.addObserver(vm);
 		 
-		
 		try {	
 			FXMLLoader fxl = new FXMLLoader(getClass().getResource("MainWindow.fxml"));
 			AnchorPane root = (AnchorPane)fxl.load();
@@ -40,8 +39,6 @@ public class Main extends Application {
 		} catch(Exception e) {
 			//e.printStackTrace();
 		}
-		
-		
 		
 	}
 	
