@@ -16,7 +16,7 @@ import javafx.fxml.FXMLLoader;
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
-		
+		MapLogic ml=new MapLogic();
 		MyClient c=new MyClient();
 		MyInterpreter interpreter=new MyInterpreter();
 		interpreter.setClient(c);
@@ -34,6 +34,7 @@ public class Main extends Application {
 			
 			MainWindowLogic mwl =fxl.getController(); //view
 			mwl.setViewModel(vm);
+			mwl.setMapLogic(ml);
 			vm.addObserver(mwl);
 			
 		} catch(Exception e) {

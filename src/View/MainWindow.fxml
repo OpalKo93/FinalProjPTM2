@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import View.MapLogic?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.TextArea?>
@@ -20,11 +21,12 @@
             <Text layoutX="35.0" layoutY="370.0" strokeType="OUTSIDE" strokeWidth="0.0" text="©Opal's Koren" />
             <Button fx:id="HomeButton" layoutX="26.0" layoutY="1.0" mnemonicParsing="false" onAction="#HomeShower" prefHeight="26.0" prefWidth="35.0" text="🏠" />
          </children></AnchorPane>
-      <AnchorPane fx:id="HomePane" layoutX="244.0" layoutY="-6.0" prefHeight="104.0" prefWidth="457.0" visible="false">
+      <AnchorPane fx:id="MapPane" layoutX="244.0" layoutY="-6.0" prefHeight="104.0" prefWidth="457.0">
          <children>
             <Button fx:id="connectB" layoutX="41.0" layoutY="32.0" mnemonicParsing="false" onAction="#PopupHandler" text="Connect" />
             <Button fx:id="loadB" layoutX="149.0" layoutY="32.0" mnemonicParsing="false" onAction="#loadMap" text="Load data" />
-            <Button fx:id="CalculateB" layoutX="278.0" layoutY="33.0" mnemonicParsing="false" text="Calculate path" />
+            <Button fx:id="CalculateB" layoutX="278.0" layoutY="33.0" mnemonicParsing="false" onAction="#PopupMapHandler" text="Calculate path" />
+            <MapLogic fx:id="mapLogic" height="383.0" layoutX="9.0" layoutY="64.0" onMouseClicked="#MarkMap" width="445.0" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="AutoPilotPane" layoutX="244.0" layoutY="6.0" prefHeight="444.0" prefWidth="457.0" visible="false">
@@ -35,8 +37,8 @@
          </children></AnchorPane>
       <AnchorPane fx:id="ManualPane" layoutX="244.0" layoutY="6.0" prefHeight="444.0" prefWidth="457.0" visible="false">
          <children>
-            <Circle fill="DODGERBLUE" layoutX="211.0" layoutY="182.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle layoutX="212.0" layoutY="180.0" radius="43.0" stroke="BLACK" strokeType="INSIDE">
+            <Circle fx:id="BigCircle" fill="DODGERBLUE" layoutX="211.0" layoutY="182.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="SmallCircle" layoutX="212.0" layoutY="180.0" onMouseMoved="#MoveJoyStick" radius="35.0" stroke="BLACK" strokeType="INSIDE">
                <fill>
                   <LinearGradient endX="1.0" endY="1.0">
                      <stops>
@@ -71,10 +73,10 @@
                   <Font size="18.0" />
                </font>
             </Text>
-            <Slider blockIncrement="0.01" layoutX="91.0" layoutY="98.0" max="1.0" orientation="VERTICAL" />
-            <Slider blockIncrement="0.01" layoutX="152.0" layoutY="292.0" max="1.0" min="-1.0" />
+            <Slider fx:id="ThrottleSlider" blockIncrement="0.01" layoutX="91.0" layoutY="98.0" max="1.0" onMouseDragged="#MoveThrottleSlider" orientation="VERTICAL" />
+            <Slider fx:id="RudderSlider" blockIncrement="0.01" layoutX="152.0" layoutY="292.0" max="1.0" min="-1.0" onMouseDragged="#MoveRudderSlider" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="MapPane" layoutX="249.0" layoutY="67.0" prefHeight="383.0" prefWidth="451.0" visible="false" />
+      <AnchorPane fx:id="HomePane" layoutX="249.0" layoutY="67.0" prefHeight="383.0" prefWidth="451.0" visible="false" />
    </children>
 </AnchorPane>
